@@ -117,8 +117,7 @@
 
 @media (min-width: 400px) {
     .countdown p {
-        font-size: 500px;
-        text-align: center;
+        display: none;
     }
     
     .dayTime,

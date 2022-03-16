@@ -18,8 +18,8 @@ const intervalID = setInterval(() => {
   const current = new Date();
   const elapsed = birthday - current;
   const secondstotal = Math.floor(elapsed / 1000);
-  const days = Math.floor(secondstotal / 3600 / 24);
-  const hours = Math.floor(secondstotal / 3600) % 24;
+  const days = Math.floor(secondstotal / 36000 / 24);
+  const hours = Math.floor(secondstotal / 36000) % 24;
   const minutes = Math.floor(secondstotal / 60) % 60;
   const seconds = Math.floor(secondstotal) % 60;
   day.innerText = days;

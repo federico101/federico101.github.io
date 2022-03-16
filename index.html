@@ -1,1 +1,53 @@
 <!-- new plan -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="home.css">
+    <script type="text/javascript" src="home.js" defer></script>
+</head>
+
+<body>
+    <div class="countdown">
+        <div class="hbd">
+            <p class="hbdtext">Someone's birthday is coming!</p>
+        </div>
+        <div class="times">
+            <div class="time">
+                <h2 class="dayTime">00</h2>
+                <h2 class="dayLabel">Day</h2>
+            </div>
+            <div class="time">
+                <h2 class="hourTime">00</h2>
+                <h2 class="hourLabel">Hours</h2>
+            </div>
+            <div class="time">
+                <h2 class="minTime">00</h2>
+                <h2 class="minLabel">Minutes</h2>
+            </div>
+            <div class="time">
+                <h2 class="secTime">00</h2>
+                <h2 class="secLabel">Seconds</h2>
+            </div>
+        </div>
+        <img src="cake.svg" width="200px" class="cake">
+        <canvas id="my-canvas"></canvas>
+        <audio class="bg-crowd">
+            <source src="happy-birthday-crowd.mp3" type="audio/mpeg">
+        </audio>
+        <a href="https://github.com/federico101">&copy;federico101</a>
+    </div>
+    
+    <script src="index.min.js}"></script>
+    <script type="text/javascript">
+        var confettiSettings = { target: 'my-canvas' };
+        var confetti = new ConfettiGenerator(confettiSettings);
+        confetti.render();
+    </script>
+</body>
+
+</html>

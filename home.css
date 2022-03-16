@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&family=Lobster&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.countdown {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    background: linear-gradient(-45deg, #ead5dc, #f4b6c2, #23a6d5, #003366);
+    background-size: 400% 400%;
+    animation: gradient-bg 15s ease infinite;
+    overflow: hidden;
+}
+
+.countdown p {
+    color: white;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+    font-size: 3rem;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 30px;
+}
+
+@keyframes gradient-bg {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.times {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.times.disappear {
+    display: none;
+}
+
+.time {
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    font-family: 'Josefin', sans-serif;
+    color: white;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.dayTime,
+.hourTime,
+.minTime,
+.secTime {
+    font-size: 2rem;
+}
+
+.dayLabel,
+.hourLabel,
+.minLabel,
+.secLabel {
+    font-size: 1rem;
+}
+
+/* cake */
+
+.countdown img {
+    filter: drop-shadow(0 0 .5rem rgba(0, 0, 0, .5));
+    z-index: 2;
+    display: none;
+}
+
+.countdown img.active {
+    display: block;
+}
+
+.countdown a {
+    position: fixed;
+    bottom: 20px;
+    font-family: sans-serif;
+    font-size: 0.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+/* confettis */
+
+#my-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 100vh;
+    visibility: hidden;
+}
+
+#my-canvas.reveal {
+    visibility: visible;
+}
+
+/* queries */
+
+@media (min-width: 400px) {
+    .countdown {
+        padding: 20px;
+    }
+    
+    .countdown p {
+        font-size: 30px;
+    }
+    
+    .dayTime,
+    .hourTime,
+    .minTime,
+    .secTime {
+        font-size: 20px;
+    }
+    
+    .dayLabel,
+    .hourLabel,
+    .minLabel,
+    .secLabel {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .countdown p {
+        font-size: 2rem;
+    }
+    
+    .countdown img {
+        width: 250px;
+    }
+    
+    .countdown a {
+        font-size: 1rem;
+    }
+}

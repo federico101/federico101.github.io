@@ -116,12 +116,9 @@
 /* queries */
 
 @media (min-width: 400px) {
-    .countdown {
-        overflow: hidden;
-    }
-
     .countdown p {
-        font-size: 30px;
+        font-size: 45px;
+        text-align: center;
     }
     
     .dayTime,

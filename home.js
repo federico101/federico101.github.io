@@ -9,7 +9,7 @@ function bgPlay() {
     bgCrowd.play();
 };
 
-let birthday = new Date("0422/2022");
+let birthday = new Date("04/22/2022");
 const day = document.querySelector(".dayTime");
 const hour = document.querySelector(".hourTime");
 const minute = document.querySelector(".minTime");
